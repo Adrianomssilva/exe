@@ -14,6 +14,6 @@ while n != arr[i]
   puts "Número encontrado"
   
  else
-  "procurando número"
+  puts "procurando número"
  end
 end 
