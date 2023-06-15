@@ -1,5 +1,10 @@
-puts "Hello World"
-p "Hello World"
-nome = "Adriano"
+puts "Bem-vindo ao cookbook, sua rede social de receitas "
 
-puts "Hello #{Adriano}"
+receitas = []
+
+puts "Digite o nome da receita: "
+receita = gets.chomp
+
+receitas << receita
+
+puts "Receita #{receita} cadastrada com sucesso"
