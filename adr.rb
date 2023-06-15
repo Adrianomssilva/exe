@@ -13,9 +13,9 @@ while (true) do
    puts "===========RECEITAS CADASTRADAS==========="
    # Forma de fazer o FOR em Ruby
    # posso fazer apenas com puts receitas (nome do array)
-   receitas.each do |nome|
-      puts nome
-   
-   end
+   # receitas.each do |nome|
+   #    puts nome
+   # end
+   puts receitas
    puts
 end
