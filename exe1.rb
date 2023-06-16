@@ -1,9 +1,10 @@
 #  LINEAR  SEARCH
 
 
-arr = [10,20,30,40,50]
+arr = Array (1..10)
 
-n = 10
+print "Digite um número de 1 a 10 aqui : "
+n = gets.to_i
 
 i = 0
 s = arr.length
@@ -11,7 +12,7 @@ s = arr.length
 while s >= i 
   if n == arr[i]
     puts "Encontei o número #{n} na posição #{i + 1}"
-    
+    break
   else
     puts "Procurando número"
     
