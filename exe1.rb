@@ -19,6 +19,8 @@ while s >= i
   end
    i = i + 1
 end 
-
-#  Buscar uma forma de parar o while logo após
+puts "Obrigado por ultizar nosso programa!"
+#  Buscar uma forma de parar o while logo após (feito)
 # encontrar o número.
+
+# N2 - Criar um array random e buscar dentro desse array o número.
