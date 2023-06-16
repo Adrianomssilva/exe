@@ -3,17 +3,18 @@
 
 arr = [10,20,30,40,50]
 
-n = 20
+n = 10
 
 i = 0
 s = arr.length
 
-while n != arr[i]
-  i = i + 1
- if n = arr[i]
-  puts "Número encontrado"
-  
- else
-  puts "procurando número"
- end
+while s >= i 
+  if n == arr[i]
+    puts "Encontei o número #{n} na posição #{i + 1}"
+    
+  else
+    puts "Procurando número"
+    
+  end
+   i = i + 1
 end 
