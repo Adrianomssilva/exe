@@ -18,3 +18,6 @@ while s >= i
   end
    i = i + 1
 end 
+
+#  Buscar uma forma de parar o while logo após
+# encontrar o número.
