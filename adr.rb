@@ -40,6 +40,7 @@ while (opcao != 3) do
    puts "[3] Sair"
 
    print "Escolha uma opção: "
+   opcao = gets.to_i
 end
 
 puts "Obrigado por usar o Cookbook. Obrigado!"
