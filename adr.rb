@@ -15,8 +15,10 @@ while (opcao != 3) do
    if (opcao == 1)
    puts "Digite o nome da receita: "
    nome = gets.chomp
+    puts "Digite o tipo da receita: "
+   tipo = gets.chomp
 
-   receitas << nome
+   receitas << {nome: nome, tipo: tipo}
 
    puts "Receita #{nome} cadastrada com sucesso"
    puts
@@ -30,11 +32,13 @@ while (opcao != 3) do
    # receitas.each do |nome|
    #    puts nome
    # end
-   puts receitas
-   puts
+   receitas.each do |receitas|
+   puts "#{receitas[:nome]} - #{receitas[:tipo]}"
+   end
    else
       puts "Opção não cadastrada"
    end
+   # O menu foi add novamente para parar o loop infinito
    puts "[1] Cadastrar uma receita"
    puts "[2] Ver todas as receitas"
    puts "[3] Sair"
