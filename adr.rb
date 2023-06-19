@@ -8,17 +8,22 @@ puts "[1] Cadastrar uma receita"
 puts "[2] Ver todas as receitas"
 puts "[3] Sair"
 
-print "Escolha uma opção"
-opcao = gets.chomp
+print "Escolha uma opção: "
+opcao = gets.to_i
 
-while (true) do
+while (opcao != 3) do
+   if (opcao == 1)
    puts "Digite o nome da receita: "
-   receita = gets.chomp
+   nome = gets.chomp
 
-   receitas << receita
+   receitas << nome
 
-   puts "Receita #{receita} cadastrada com sucesso"
+   puts "Receita #{nome} cadastrada com sucesso"
    puts
+   
+   # utilizar elsif como forma de demonstração"
+
+   elsif (opcao == 2)
    puts "===========RECEITAS CADASTRADAS==========="
    # Forma de fazer o FOR em Ruby
    # posso fazer apenas com puts receitas (nome do array)
@@ -27,4 +32,14 @@ while (true) do
    # end
    puts receitas
    puts
+   else
+      puts "Opção não cadastrada"
+   end
+   puts "[1] Cadastrar uma receita"
+   puts "[2] Ver todas as receitas"
+   puts "[3] Sair"
+
+   print "Escolha uma opção: "
 end
+
+puts "Obrigado por usar o Cookbook. Obrigado!"
