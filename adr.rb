@@ -1,5 +1,6 @@
 # Add condicionais para dar mais opções e melhorar o cod.
 def menu()
+   puts "=========== MENU ==========="
    puts "[1] Cadastrar uma receita"
    puts "[2] Ver todas as receitas"
    puts "[3] Sair"
