@@ -39,6 +39,8 @@ while (opcao != 3) do
       puts "Opção não cadastrada"
    end
    # O menu foi add novamente para parar o loop infinito
+   puts ""
+   puts ""
    puts "[1] Cadastrar uma receita"
    puts "[2] Ver todas as receitas"
    puts "[3] Sair"
