@@ -8,16 +8,15 @@ def menu()
    return gets.to_i
 end
 
-def inserir_receita (r)
+def inserir_receita ()
    puts "Digite o nome da receita: "
    nome = gets.chomp
    puts "Digite o tipo da receita: "
    tipo = gets.chomp
-
-   r << {nome: nome, tipo: tipo}
-
+   
    puts "Receita #{nome} cadastrada com sucesso"
    puts
+   return {nome: nome, tipo: tipo}
 end
 
 def lista_receitas (r)
@@ -40,7 +39,7 @@ opcao = menu()
 
 while (opcao != 3) do
    if (opcao == 1)
-   inserir_receita(receitas)
+   receitas << inserir_receita()
    
    # utilizar elsif como forma de demonstração"
 
