@@ -1,9 +1,15 @@
+CADASTRAR = 1
+RECEITAS = 2
+BUSCAR = 3
+SAIR = 4
+
 # Add condicionais para dar mais opções e melhorar o cod.
 def menu()
    puts "=========== MENU ==========="
-   puts "[1] Cadastrar uma receita"
-   puts "[2] Ver todas as receitas"
-   puts "[3] Sair"
+   puts "[#{CADASTRAR}] Cadastrar uma receita"
+   puts "[#{RECEITAS}] Ver todas as receitas"
+   puts "[#{BUSCAR}] BUSCAR"
+   puts "[#{SAIR}] Sair"
    puts ""
    print "Escolha uma opção: "
    return gets.to_i
