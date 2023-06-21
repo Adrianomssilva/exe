@@ -8,7 +8,7 @@ def menu()
    puts "=========== MENU ==========="
    puts "[#{CADASTRAR}] Cadastrar uma receita"
    puts "[#{RECEITAS}] Ver todas as receitas"
-   puts "[#{BUSCAR}] BUSCAR"
+   puts "[#{BUSCAR}] Buscar receitas"
    puts "[#{SAIR}] Sair"
    puts ""
    print "Escolha uma opção: "
@@ -38,20 +38,27 @@ def lista_receitas (r)
    end
 end
 
+
+ 
 puts "Bem-vindo ao cookbook, sua rede social de receitas "
 
 receitas = []
 
 opcao = menu()
 
-while (opcao != 3) do
-   if (opcao == 1)
+while (opcao != SAIR) do
+   if (opcao == CADASTRAR)
    receitas << inserir_receita()
    
    # utilizar elsif como forma de demonstração"
 
-   elsif (opcao == 2)
+   elsif (opcao == RECEITAS)
    lista_receitas(receitas)
+   elsif (opcao == BUSCAR)
+      print "Escreva o tipo de receita desejada : "
+      type = gets.chomp
+      receitas.select { |receitas| receitas[:tipo] == type}
+      
    else
       puts "Opção não cadastrada"
    end
