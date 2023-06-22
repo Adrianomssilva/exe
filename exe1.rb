@@ -24,3 +24,4 @@ puts "Obrigado por ultizar nosso programa!"
 # encontrar o número.
 
 # N2 - Criar um array random e buscar dentro desse array o número.
+
