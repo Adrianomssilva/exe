@@ -6,8 +6,8 @@ def cadastro ()
    nota1 = gets.to_i
    puts "Nota 2 : "
    nota2 = gets.to_i
-   
-   return {nome: nome, nota1: nota1, nota2: nota2}
+   media = (nota1 + nota2)/2
+   return {nome: nome, nota1: nota1, nota2: nota2, media: media}
 
 end
 print "Quantos alunos serão cadastrados? "
