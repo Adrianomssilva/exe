@@ -12,6 +12,7 @@ def menu ()
    puts "[#{CADASTRAR}] CADASTRAR NOVOS ESTUDANTES"
    puts "[#{VERIFICAR}] VERIFICAR ALUNOS CADASTRADOS"
    puts "[#{SAIR}] SAIR"
+   return gets.to_i
 end
 
 # metodo cadastro add um hash ao array
@@ -23,14 +24,18 @@ def cadastro ()
    puts "Nota 2 : "
    nota2 = gets.to_i
    media = (nota1 + nota2)/2
+   puts "#{nome} foi cadastrado com sucesso!!"
    return {nome: nome, nota1: nota1, nota2: nota2, media: media}
 #  aprender a mudar a classe do objeto para float, quero um número não inteiro (pesquisar para descobrir)
 end
 
 def verificar(r)
-   r.each |alunos|
+   puts""
+   puts ""
+   r.each do |alunos|
    puts "#{alunos[:nome]} tem uma média de #{alunos[:media]}"
-
+   end
+end
 # print "Quantos alunos serão cadastrados? "
 # n_alunos = gets.to_i
 
@@ -41,13 +46,16 @@ opcao = menu()
 while (opcao != SAIR)
    if (opcao == CADASTRAR) 
       alunos << cadastro()
-      puts "#{nome} foi cadastrado com sucesso!!"
    elsif (opcao == VERIFICAR)
       verificar(alunos)
+   else
+      puts "Por favor, escolha uma opção válida"
    end
    puts ""
    puts ""
    opcao = menu
 
 end
+puts ""
+puts "==========================="
 puts "OBRIGADO POR USAR O BOLETIM"
