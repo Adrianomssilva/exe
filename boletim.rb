@@ -38,7 +38,7 @@ def verificar(r)
    puts "#{alunos[:nome]} tem uma média de #{alunos[:media]}"
    end
 end
-
+# Buscar não funciona... voltar para entender o problema
 def buscar(r)
    print "Digite o nome do aluno: "
    nome_buscar = gets.chomp
