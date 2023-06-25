@@ -1,7 +1,8 @@
 # Criar um programa que eu possa cadastrar quantos alunos eu quiser e comparar as suas médias e Buscar o aluno que eu quiser
 CADASTRAR = 1
 VERIFICAR = 2
-SAIR = 3
+BUSCAR = 3
+SAIR = 4
 
 
 
@@ -11,6 +12,7 @@ def menu ()
    puts "ESCOLHA UMA DAS OPÇÕES A BAIXO"
    puts "[#{CADASTRAR}] CADASTRAR NOVOS ESTUDANTES"
    puts "[#{VERIFICAR}] VERIFICAR ALUNOS CADASTRADOS"
+   puts "[#{BUSCAR}] Buscar aluno"
    puts "[#{SAIR}] SAIR"
    return gets.to_i
 end
@@ -28,7 +30,7 @@ def cadastro ()
    return {nome: nome, nota1: nota1, nota2: nota2, media: media}
 #  aprender a mudar a classe do objeto para float, quero um número não inteiro (pesquisar para descobrir)
 end
-
+# verificar cria uma lista dos alunos com suas respectivas médias
 def verificar(r)
    puts""
    puts ""
@@ -36,6 +38,15 @@ def verificar(r)
    puts "#{alunos[:nome]} tem uma média de #{alunos[:media]}"
    end
 end
+
+def buscar(r)
+   print "Digite o nome do aluno: "
+   nome_buscar = gets.chomp
+   r.search {|alunos| nome_buscar == :nome}
+   
+end
+
+
 # print "Quantos alunos serão cadastrados? "
 # n_alunos = gets.to_i
 
@@ -48,6 +59,8 @@ while (opcao != SAIR)
       alunos << cadastro()
    elsif (opcao == VERIFICAR)
       verificar(alunos)
+   elsif (opcao == BUSCAR)
+      buscar(alunos)
    else
       puts "Por favor, escolha uma opção válida"
    end
