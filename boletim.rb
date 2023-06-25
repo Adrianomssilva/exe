@@ -12,7 +12,7 @@ def menu ()
    puts "ESCOLHA UMA DAS OPÇÕES A BAIXO"
    puts "[#{CADASTRAR}] CADASTRAR NOVOS ESTUDANTES"
    puts "[#{VERIFICAR}] VERIFICAR ALUNOS CADASTRADOS"
-   puts "[#{BUSCAR}] Buscar aluno"
+   puts "[#{BUSCAR}] BUSCAR ALUNO"
    puts "[#{SAIR}] SAIR"
    return gets.to_i
 end
@@ -42,8 +42,8 @@ end
 def buscar(r)
    print "Digite o nome do aluno: "
    nome_buscar = gets.chomp
-   r.search {|alunos| nome_buscar == :nome}
-   
+   puts r.select {|alunos| nome_buscar == alunos[:nome]}
+    
 end
 
 
