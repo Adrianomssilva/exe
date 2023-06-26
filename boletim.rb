@@ -71,4 +71,4 @@ while (opcao != SAIR)
 end
 puts ""
 puts "==========================="
-puts "OBRIGADO POR USAR O BOLETIM"
+puts "OBRIGADO POR USAR O BOLETIM!!"
