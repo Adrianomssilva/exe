@@ -3,5 +3,6 @@ class Professor
   def initialize(nome, cod_func)
     @nome = nome
     @cod_func = cond_func
+    @idade = idade
   end
 end
